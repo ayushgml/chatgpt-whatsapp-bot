@@ -17,6 +17,16 @@ logger = logging.getLogger(__name__)
 
 # Sending message logic through Twilio Messaging API
 def send_message(to_number, body_text):
+    """
+    Sends a WhatsApp message to the specified phone number.
+
+    Parameters:
+    - to_number (str): The phone number to send the message to.
+    - body_text (str): The text of the message to send.
+
+    Returns:
+    None
+    """
     try:
         # Split the body_text into substrings of 1600 characters or less
         max_length = 1600

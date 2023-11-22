@@ -1,3 +1,7 @@
+# This Dockerfile sets up a Debian-based container with Python and PostgreSQL.
+# It installs the necessary dependencies, creates a virtual environment, and copies the application code.
+# The PostgreSQL database is initialized with a user and a database.
+# The container exposes port 8000 and starts the application using uvicorn.
 FROM debian:stable-slim
 
 # Set environment variables

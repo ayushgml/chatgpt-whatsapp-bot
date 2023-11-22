@@ -32,6 +32,17 @@ async def index():
 
 @app.post("/message")
 async def reply(request: Request, Body: str = Form(), db: Session = Depends(get_db)):
+    """
+    Handle the incoming webhook request and generate a response using ChatGPT.
+
+    Args:
+        request (Request): The incoming webhook request.
+        Body (str): The content of the message received.
+        db (Session): The database session.
+
+    Returns:
+        str: An empty string.
+    """
     # Extract the phone number from the incoming webhook request
     form_data = await request.form()
     whatsapp_number = form_data['From'].split("whatsapp:")[-1]

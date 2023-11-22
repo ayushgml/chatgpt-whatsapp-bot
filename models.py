@@ -18,6 +18,15 @@ SessionLocal = sessionmaker(bind=engine)
 Base = declarative_base()
 
 class Conversation(Base):
+    """
+    Represents a conversation entity.
+
+    Attributes:
+        id (int): The unique identifier for the conversation.
+        sender (str): The sender of the message.
+        message (str): The message content.
+        response (str): The response to the message.
+    """
     __tablename__ = "conversations"
 
     id = Column(Integer, primary_key=True, index=True)
