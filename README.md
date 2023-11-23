@@ -97,7 +97,7 @@ The project is a FastAPI application that uses the OpenAI API to generate respon
 
 
 ## Project working images and screenshots
-![Working](ss.jpeg){:height="300px"}
+![Working](ss.jpeg)
 ![Server-logs](server-logs.png)
 ![Ngrok](ngrok.png)
 
